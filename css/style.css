@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+header {
+		background:#6CC;
+		color:#000;
+		
+		}
+.main 	{
+		background:#CCC;
+		}
+.main1 	{
+		background:#FFF;
+		}
+aside 	{
+		background:#FFF;
+		color:#000;
+		}
+footer	{
+		background:#6C9;
+		
+		}
+p {
+	font-family: 'Open Sans';
+	font-size: 18px;
+	color: black;
+	line-height: 18px;
+	margin-bottom: 20px;
+	}
+h1 {
+	text-aling: ceneter;
+	font-size: 36px;
+	color: black;
+	font-family: 'Open Sans';
+	}
+#encabezado{
+	font-size: 1.6em;
+}
+

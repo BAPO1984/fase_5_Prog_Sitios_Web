@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=			"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/style.css"><!--Mi estilo css jorge luis-->
+</head>
+
+
+    <title>Nuevo Producto</title>
+    <body>
+    <div class="container"> 
+    		<img src="images/Fox_Electronics_Logo.png">
+    </div>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Administrador<span class="sr-only">(current)</span></a>     
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Inventario
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="nuevo_prod.html">Nuevo (+) </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="actualizar_prod.html">Actualizar (Update) </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="eliminar_prod.html">Eliminar (Delete)</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="consultar_prod.html">Consultar (Consult)</a>
+                </div>
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ventas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Ventas.html">Vender (Sales)</a>                       
+              </div>
+             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Utilidades
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="precios.html">Calcular valores </a>                      
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="resistencias.html">Tabla Resistencias</a>
+                <div class="dropdown-divider"></div><div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="crearpdf.php">Reporte PDF</a>
+              </div>
+             </li>       
+          </ul>      
+        </div>
+      </nav>
+    
+    
+    </div>
+    <div>
+    
+    </div>
+
+      <br>
+     
+    
+    <div class="container">
+		<div class="main1 row">
+			<article class="col-xs-12">
+					
+                    <center>
+					<h3 align="center">Nuevo Producto</h3>
+					
+					<p class="container">Permite al usuario ingresar un producto con las siguientes especificaciones: código de
+                     producto, nombre de producto, marca del producto, precio de compra, cantidad comprada.</p>
+                    </center>
+                             
+                    <div class="col-sm-12 " id="precios">  
+                         <form class="align-content-center" method="post" action="add_producto.php">
+                      	<div class="form-group row">
+                        <label for="inputCod" class="col-sm-4 col-form-label">Código de producto:</label>
+                            <div class="col-sm-8">
+                              <input type="number" name="codigo" class="form-control" id="validationDefault01" placeholder="Codigo asignado" required>
+                            </div>            
+                      	</div>
+                        <div class="form-group row">
+                        <label for="inputnom_pro" class="col-sm-4 col-form-label">Nombre de producto:</label>
+                            <div class="col-sm-8">
+                              <input type="text" name="nombre" class="form-control" id="validationDefault02" placeholder="Nombre asignado" required>
+                            </div>            
+                      	</div>          
+                     	<div class="form-group row">
+                        <label for="inputmar_pro" class="col-sm-4 col-form-label">Marca del producto:</label>
+                            <div class="col-sm-8">
+                              <input type="text" name="marca" class="form-control" id="validationDefault03" placeholder="Marca Fabricante" required>
+                            </div>            
+                      	</div>   
+                     	<div class="form-group row">
+                        <label for="inputpre_pro" class="col-sm-4 col-form-label">Precio de compra:</label>
+                            <div class="col-sm-8">
+                              <input type="number" name="precio" class="form-control" id="validationDefault04" placeholder="Precio del producto" required>
+                            </div>            
+                      	</div> 
+                        <div class="form-group row">
+                        <label for="inputcan_pro" class="col-sm-4 col-form-label">Cantidad comprada:</label>
+                            <div class="col-sm-8">
+                              <input type="number" name="cantidad" class="form-control" id="validationDefault05" placeholder="Cantidad" required>
+                            </div>            
+                      	</div> 
+
+                        <center>
+                      <input  type="submit" class="btn btn-secundary btn-outline-success " id="" value="  Guardar  ">        
+                      
+                      <button class="btn btn-secundary btn-outline-dark" id="reset" onclick="location.reload()"><strong>Limpiar</strong></button> 
+                      </center>
+                      </form>
+                     
+                      
+            
+                                           
+                      <br> 
+                </div>
+                </article> 
+				
+		</div>
+	
+	<footer>
+		<div class="container">
+			<center><br><h4>&copy; UNAD - Grupo: 22</h4><br></center>
+			
+		</div>
+	</footer>
+	</div>
+ 
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=						"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/funciones.js"></script>
+</body>
+</html>

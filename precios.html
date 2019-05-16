@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity=			"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/style.css"><!--Mi estilo css jorge luis-->
+</head>
+
+
+    <title>Precios</title>
+    <div class="container"> 
+    		<img src="images/Fox_Electronics_Logo.png">
+    </div>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mr-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Administrador<span class="sr-only">(current)</span></a>     
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Inventario
+              </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="nuevo_prod.html">Nuevo (+) </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="actualizar_prod.html">Actualizar (Update) </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="eliminar_prod.html">Eliminar (Delete)</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="consultar_prod.html">Consultar (Consult)</a>
+                </div>
+    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Ventas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Ventas.html">Vender (Sales)</a>                       
+              </div>
+             </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Utilidades
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="precios.html">Calcular valores </a>                      
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="resistencias.html">Tabla Resistencias</a>
+                <div class="dropdown-divider"></div><div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="crearpdf.php">Reporte PDF</a>
+              </div>
+             </li>       
+          </ul>      
+        </div>
+      </nav>
+    
+    
+    </div>
+    
+    
+	  
+      <br>
+     
+    
+    <div class="container">
+		<div class="main1 row">
+			<article class="col-xs-12">
+					
+                    <center>
+					<h3 align="center">Calculadora</h3>
+					
+					<p class="container">Permite ingresar un valor de compra de un producto, un porcentaje de utilidad, un porcentaje de impuesto IVA y un botón que permita calcular el valor de venta del producto.</p>
+                    </center>
+                    <center>           
+                    <div class="col-sm-6 " id="precios">  
+                         <form class="align-content-center">
+                      	<div class="form-group row">
+                        <label for="inputCosto" class="col-sm-4 col-form-label">Costo Producto:</label>
+                            <div class="col-sm-6">
+                              <input type="number" class="form-control" id="costos" placeholder="Valor compra de un producto">
+                            </div>            
+                      	</div>
+                        <div class="form-group row">
+                        <label for="inputUtilidad" class="col-sm-4 col-form-label">Porcentaje de utilidad:</label>
+                            <div class="col-sm-6">
+                            <input type="number" class="form-control" id="utilidades" placeholder="% de la Utilidad">
+                            </div>
+                      </div>
+                      <div class="form-group row">
+                      <label for="inputIva" class="col-sm-4 col-form-label">Impuesto IVA:</label>
+                            <div class="col-sm-6">
+                              <input type="number" class="form-control" id="impuesto" placeholder="% del IVA">
+                            </div>
+                      </div>               
+                      </form>
+                     
+                      
+                      <button id="btn-precio" onclick="precio()"><strong> 
+                      Precio de Venta</strong></button>        
+                      
+                      <button id="reset" onclick="location.reload()"><strong> 
+                      Limpiar</strong></button> 
+                      <br>
+                      <br>
+            
+                      <input align="middle" class="form-control col-lg-12" id="cal_valor" placeholder="Precio de Venta al público">  
+                      <br>
+                      <input align="middle" class="form-control col-lg-12" id="ganancia" placeholder="Ganancia de la Venta">
+                      </center>
+                      <br><br>   
+                </div>
+                </article> 
+				
+		</div>
+	
+	<footer>
+		<div class="container">
+			<center><h4>UNAD - Grupo: 22</h4></center>
+			
+		</div>
+	</footer>
+	</div>
+    
+
+
+<body>
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity=						"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="js/funciones.js"></script>
+</body>
+</html>
